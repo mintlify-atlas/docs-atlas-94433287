@@ -1,0 +1,93 @@
+{
+  "projectType": "general",
+  "projectName": "Electric Monks — Hegelian Dialectic Skill",
+  "projectDescription": "An AI agent skill that automates dialectical reasoning through Electric Monks — subagents that believe opposing positions at full conviction, enabling users to analyze contradictions from a belief-free position.",
+  "theme": "palm",
+  "primaryColor": "#8B5CF6",
+  "lightColor": "#A78BFA",
+  "darkColor": "#6D28D9",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/electric-monks",
+              "concepts/artificial-belief-system",
+              "concepts/dialectical-process",
+              "concepts/when-to-use"
+            ]
+          },
+          {
+            "group": "Process Guide",
+            "pages": [
+              "process/overview",
+              "process/phase1-interview",
+              "process/phase2-prompts",
+              "process/phase3-spawning",
+              "process/phase4-analysis",
+              "process/phase5-synthesis",
+              "process/phase6-validation",
+              "process/phase7-recursion"
+            ]
+          },
+          {
+            "group": "Advanced Usage",
+            "pages": [
+              "advanced/belief-burden-patterns",
+              "advanced/domain-adaptation",
+              "advanced/decorrelation",
+              "advanced/tips-best-practices"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Theory",
+        "groups": [
+          {
+            "group": "Theoretical Foundations",
+            "pages": [
+              "theory/overview",
+              "theory/rao-belief-bottleneck",
+              "theory/hegel-dialectics",
+              "theory/boyd-destruction-creation",
+              "theory/alexander-semi-lattice",
+              "theory/additional-frameworks"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Electric Monks — subagents that believe positions at full conviction",
+    "Seven-phase dialectical process from interview to recursive synthesis",
+    "Belief burden calibration patterns for different cognitive styles",
+    "Boydian decomposition for cross-domain structural analysis",
+    "Hegelian Aufhebung (sublation) synthesis that transforms questions",
+    "Recursive depth — each synthesis becomes the next round's thesis",
+    "Domain-adaptive research strategies for technical and personal decisions"
+  ],
+  "publicApiSurface": [
+    "Phase 1: Elenctic Interview + Research",
+    "Phase 2: Generate Electric Monk Prompts",
+    "Phase 3: Spawn the Electric Monks",
+    "Phase 4: Determinate Negation (Structural Analysis)",
+    "Phase 5: Sublation (Aufhebung Synthesis)",
+    "Phase 6: Validation by Monks + Hostile Auditor",
+    "Phase 7: Recursion (New Contradictions)",
+    "Belief Burden Patterns: Convergent Visionary, Empathic Integrator, Exploratory Debater, Practical Executor, Possibility Explorer, Steady Guardian",
+    "Domain Adaptation Modes: External-Research, Personal/Values, Mixed Domains"
+  ]
+}
