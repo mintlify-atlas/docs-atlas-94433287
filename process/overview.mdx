@@ -1,0 +1,106 @@
+---
+title: Process overview
+description: Understand the complete 7-phase dialectical process from interview to recursive synthesis
+---
+
+## The orchestrator role
+
+You are the **orchestrator**. You conduct the elenctic interview, identify the user's belief burden, generate the monk prompts, spawn the Electric Monks, perform the structural analysis, and produce the synthesis. You use subagent sessions (via `claude -p` or your environment's equivalent) for the monks so each gets a fresh, fully committed belief context.
+
+## The complete process flow
+
+```
+You (Orchestrator)
+├── Phase 1: Elenctic Interview + Research (you, with the user)
+│   ├── 1a: Explain the process — set expectations, emphasize user as co-pilot
+│   ├── 1c′: Identify the user's belief burden and calibrate monk roles
+│   ├── 1d: Ground the monks (research or deep interview, domain-dependent)
+│   ├── 1e: Write context briefing document to file
+│   └── 1f: Confirm framing with user — ask about gaps in coverage
+├── Phase 2: Generate Electric Monk prompts (you) — reference briefing file
+├── Phase 3: Spawn the Electric Monks (subagents, read briefing, BELIEVE fully)
+│   ├── Decorrelation check: did monks genuinely diverge in framework, not just conclusion?
+│   └── User checkpoint: "Is there evidence or a comparison class both monks missed?"
+├── Phase 4: Determinate Negation (you — structural analysis, saved to file)
+│   ├── 4.0: Internal tensions — where does each monk's own logic undermine itself?
+│   └── 4.5: Boydian decomposition — shatter, find cross-domain connections
+├── Phase 5: Sublation / Aufhebung (you — synthesis, saved to file)
+│   └── Abduction test: does synthesis make the original contradiction *predictable*?
+├── Phase 6: Validation (Monks A & B evaluate — were they elevated or defeated?)
+│   ├── Adversarial check: would the hardest-hit monk actually accept this?
+│   ├── Hostile Auditor: fresh agent, strongest model, sole job is to find flaws
+│   └── Refine: present improvements individually to user, incorporate accepted ones
+└── Phase 7: Recursion — propose 2-4 directions, user chooses (default: at least once)
+    ├── Queue unexplored contradictions as the user's orientation library
+    └── Repeat from Phase 2 (or Phase 1 if new research needed) on chosen direction
+```
+
+<Info>
+The user can intervene at any point — correcting a monk's framing, redirecting research, rejecting a compromise-shaped synthesis. The user never has to *believe* anything — that's the monks' job.
+</Info>
+
+## Three-phase structure
+
+The dialectic follows a classic pattern:
+
+<Steps>
+  <Step title="Structure (Phases 1-3)">
+    Build the thesis and antithesis through interview, research, and monk spawning. The goal is to get two fully committed positions grounded in real evidence.
+  </Step>
+  
+  <Step title="Unstructure (Phase 4)">
+    Destroy both positions through determinate negation and Boydian decomposition. Shatter them into atomic parts and find cross-domain connections.
+  </Step>
+  
+  <Step title="Restructure (Phases 5-7)">
+    Synthesize something new through Aufhebung, validate it with the monks and a hostile auditor, then identify new contradictions for the next round.
+  </Step>
+</Steps>
+
+## What makes this process unique
+
+<CardGroup cols={2}>
+  <Card title="Belief outsourcing" icon="brain">
+    The monks carry 100% of the belief load, freeing you to analyze structure from a belief-free position
+  </Card>
+  
+  <Card title="Structural analysis" icon="network-wired">
+    Boydian decomposition finds cross-domain connections that single linear arguments can't reach
+  </Card>
+  
+  <Card title="Genuine synthesis" icon="diagram-project">
+    Aufhebung transforms the question itself, making the original contradiction predictable
+  </Card>
+  
+  <Card title="Recursive depth" icon="arrows-spin">
+    Each synthesis becomes the next thesis, reaching territory no single round could access
+  </Card>
+</CardGroup>
+
+## Time expectations
+
+Expect **10-15 minutes per round minimum**, and plan for **at least 3 rounds**. This skill needs the best available model — every phase benefits from maximum reasoning capability.
+
+<Warning>
+The first round is calibration — the least insightful output. The real breakthroughs usually come in rounds 2-3, once the process has dug past the obvious framing into the deeper tensions.
+</Warning>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Phase 1: Interview" href="/process/phase1-interview" icon="comments">
+    Start with the elenctic interview and research
+  </Card>
+  
+  <Card title="Phase 2: Prompts" href="/process/phase2-prompts" icon="code">
+    Generate the Electric Monk prompts
+  </Card>
+  
+  <Card title="Phase 3: Spawning" href="/process/phase3-spawning" icon="clone">
+    Spawn the monks as separate subagents
+  </Card>
+  
+  <Card title="Phase 4: Analysis" href="/process/phase4-analysis" icon="magnifying-glass">
+    Perform determinate negation
+  </Card>
+</CardGroup>

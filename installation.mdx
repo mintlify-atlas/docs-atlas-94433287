@@ -1,0 +1,110 @@
+---
+title: Installation
+description: Set up the Electric Monks Dialectic Skill with your coding agent
+---
+
+# Installation
+
+The Electric Monks Dialectic Skill works with any coding agent that supports subagent spawning and web search — Claude Code, Cursor, Windsurf, and similar tools.
+
+<Note>
+**This is a heavy process by design.** Expect 10–15 minutes per round minimum, and plan for at least 3 rounds. This skill needs the best available model — every phase benefits from maximum reasoning capability.
+</Note>
+
+## Requirements
+
+Your coding agent must support:
+
+- **Subagent spawning** — The skill spawns independent Electric Monk sessions in fresh contexts
+- **Web search** — For research and evidence gathering
+- **File operations** — Each dialectic generates several output files
+
+## Directory structure
+
+Create a directory to collect your dialectics. Each dialectic gets its own subdirectory — the skill generates several files for each session:
+
+```
+dialectics/
+├── tanstack-vs-nextjs/
+│   ├── context_briefing.md
+│   ├── monk_a_output.md
+│   ├── monk_b_output.md
+│   ├── determinate_negation.md
+│   ├── sublation.md
+│   └── dialectic_queue.md
+├── agent-governance/
+│   └── ...
+└── career-decision/
+    └── ...
+```
+
+### Generated files explained
+
+- **context_briefing.md** — Research synthesis and domain context that both Monks read
+- **monk_a_output.md** — First Monk's fully committed position essay
+- **monk_b_output.md** — Second Monk's fully committed position essay
+- **determinate_negation.md** — Structural analysis of the contradiction
+- **sublation.md** — The synthesis that transforms the question
+- **dialectic_queue.md** — Tracks explored and unexplored contradictions for future rounds
+
+## Setup
+
+Create your dialectics directory:
+
+```bash
+mkdir -p ~/dialectics
+cd ~/dialectics
+```
+
+<Warning>
+The `dialectic_queue.md` file persists across sessions. You can come back to it in a future session and pick up where you left off with unexplored contradictions.
+</Warning>
+
+## Loading the skill
+
+The skill is loaded using your coding agent's skill installation command. The exact syntax depends on your agent:
+
+### For agents supporting /install-skill
+
+```
+/install-skill /path/to/SKILL.md
+```
+
+### Alternative installation methods
+
+If your agent doesn't support `/install-skill`, check your agent's documentation for how to load custom skills or agent prompts.
+
+## Model selection
+
+<Note>
+**Use the strongest available model.** Every phase benefits from maximum reasoning capability:
+
+- Elenctic interview requires subtle probing
+- Monk essays need full conviction and deep reasoning
+- Structural analysis demands cross-domain pattern recognition
+- Synthesis requires genuine creativity
+- Validation requires meta-level reasoning about belief transformation
+</Note>
+
+The skill is particularly effective with models that support extended thinking (Claude Sonnet, GPT-4, or better).
+
+## Cost expectations
+
+A single dialectic round typically involves:
+
+- **Novel/obscure domain:** 150-250K tokens (full research phase)
+- **Well-known domain:** 50-100K tokens (minimal research)
+- **Personal/values domain:** 25-75K tokens (interview-heavy, minimal external research)
+
+Plan for at least 3 rounds to reach meaningful insight. The first round is calibration.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Run your first dialectic
+  </Card>
+  <Card title="Introduction" icon="book" href="/introduction">
+    Understand how the skill works
+  </Card>
+</CardGroup>

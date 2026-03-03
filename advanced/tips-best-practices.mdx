@@ -1,0 +1,218 @@
+---
+title: Tips and Best Practices
+description: Practical guidance for getting the most out of the dialectic process — from treating yourself as co-pilot to understanding how the output evolves
+---
+
+These tips come from test runs across multiple domains and are designed to help you get maximum value from the dialectic process.
+
+## Core Operating Principles
+
+### You Are the Co-Pilot
+
+<Card title="Most Important Principle" icon="user">
+**Interrupt, correct, redirect at any point.** The Monks will get things wrong. Your corrections are the highest-leverage input in the entire process.
+</Card>
+
+From the skill documentation:
+
+> **The most important thing: YOU are the source of the best insights here.** I'll get things wrong. The monks will make bad assumptions. The synthesis might miss something obvious to you. **Interrupt me constantly.** Correct wrong assumptions. Throw in new ideas when they occur to you. Tell me "that's not quite right, it's more like..." The value of this process comes from the collision between the structured analysis and your actual knowledge and judgment. Don't trust the output — interrogate it.
+
+You should:
+- Correct wrong assumptions as soon as you spot them
+- Add evidence or comparison classes the monks missed
+- Push back when a synthesis feels like compromise rather than genuine insight
+- Redirect if the framing goes off-track
+
+### The First Round is Calibration
+
+<Warning>
+**Don't judge the skill by Round 1.** The first round is the least insightful output. Think of it as setting the stage. The real breakthroughs usually come in rounds 2 and 3.
+</Warning>
+
+When transitioning to recursion, remind yourself:
+
+> That was Round 1. Here's something important: **that round was the least insightful we'll get.** It was calibration — getting the broad shape of the tension on the table. Each subsequent round gets sharper, more specific to your actual situation, and more likely to surface something genuinely new. The process is like focusing a lens — each round tightens the resolution.
+
+Why Round 1 is less insightful:
+- The monks are working from your initial framing, which may not capture the deepest tension
+- The orchestrator is still learning your belief burden and what matters to you
+- The conceptual space hasn't been opened up yet
+
+Why Rounds 2-3 are better:
+- The synthesis has already dissolved the obvious framing
+- New contradictions emerge that couldn't have been seen from the starting point
+- The process has tuned to your actual thinking through your corrections
+- Cross-domain material enters that the first round made relevant
+
+### Say Yes to Recursion
+
+<Tip>
+**When the skill proposes recursive directions after a synthesis, pick one.** Each round ratchets up the quality.
+</Tip>
+
+The default should be to recurse at least once. Only stop if:
+- The synthesis generated no significant new contradictions (rare if the sublation is genuine)
+- You explicitly want to stop
+- The new contradictions are outside the scope of what you care about
+
+**Err on the side of one more round.** The marginal insight is often the most powerful — it's the insight that couldn't have been reached without the preceding rounds building up to it.
+
+### The Dialectic Queue Persists
+
+<Card title="Your Intellectual Map" icon="map">
+The `dialectic_queue.md` file tracks explored and unexplored contradictions. You can come back to it in a future session and pick up where you left off.
+</Card>
+
+The queue is more than a todo list — it's a map of the intellectual territory:
+- **Explored contradictions** show where you've been and what you've learned
+- **Queued contradictions** are pre-positioned reorientations you can snap into
+- **Deferred contradictions** mark paths you chose not to take (yet)
+
+For multi-round dialectics, the queue shows the branching structure: which rounds built on which syntheses.
+
+## What the Output Feels Like
+
+From the README:
+
+<Note>
+**What the output feels like:** Left alone, LLMs produce shallow takes. The dialectic breaks that pattern. As you read through the Monks' committed arguments, connections come to mind — things neither side considered, corrections to their framing, ideas you hadn't articulated yet. You feed these back in. The skill tunes to your thinking more and more with each round, but it also rigorously exposes the contradictions in that thinking — so you get an increasingly full and precise map of your own ideas. Then the skill breaks it apart and reforms it as something richer and more interesting than what you started with. Each synthesis becomes the next round's thesis, and by Round 2–3 the dialectic is operating in territory no single prompt could reach.
+</Note>
+
+This is what success looks like:
+1. **Active engagement** — you're thinking alongside the monks, not passively consuming
+2. **Corrections and additions** — you're catching what they miss
+3. **Surprising connections** — you're noticing things neither monk saw
+4. **Progressive refinement** — each round surfaces your own thinking more precisely
+5. **Genuine synthesis** — the output is richer than what you could have reached alone
+
+## High-Leverage Intervention Points
+
+Based on test runs, certain moments in the process produce outsized value when the user intervenes:
+
+### After the Context Briefing (Phase 1f)
+
+**The question to ask:**
+> "Are there companies, thinkers, comparison classes, or evidence we're missing?"
+
+This question consistently produces the highest-leverage interventions in the entire process. In testing, users caught:
+- Missing competitors (Vercel's agentic play)
+- Missing comparison classes (AI-native devtools)
+- Missing authority structures that fundamentally changed the synthesis
+
+<Tip>
+Don't skip this checkpoint. Gaps in the briefing propagate through the entire dialectic.
+</Tip>
+
+### After the Monk Essays (Phase 3)
+
+**The question to ask:**
+> "Is there a claim either monk makes that should be tested against evidence neither has considered?"
+
+This is the second high-leverage intervention point. In testing, users identified claims that sounded plausible but collapsed under scrutiny when tested against comparison classes the monks didn't consider. 
+
+Catching this before synthesis prevents the entire downstream analysis from being built on an untested assumption.
+
+### After the Synthesis (Phase 5)
+
+**What to do:**
+
+Before sending to the monks for validation, present the synthesis to the user with:
+
+> Does this ring true? Does it miss something? Is there a part that feels like hand-waving or compromise rather than genuine insight? Push back on anything that doesn't land.
+
+User corrections at this stage are extremely high-leverage — they prevent the validation and recursion phases from building on a flawed foundation.
+
+## Recognizing Good vs. Bad Synthesis
+
+### What Sublation is NOT ❌
+
+- "Use A for some cases and B for others" — that's division of labor
+- "Build something that combines the best of A and B" — that's compromise
+- "It depends on the context" — that's surrender
+- Policy recommendations ("A should open-source more") — that's not reconceptualization
+- "Both sides have valid points" — that's the absence of thinking
+
+### What Sublation IS ✅
+
+- A reconceptualization of what the thing IS — potentially changing the unit of analysis itself
+- Concrete enough to act on or sketch architecturally
+- Something neither Monk A nor Monk B proposed or could have proposed from within their frame
+- Something that, once stated, makes it hard to go back to thinking in the old terms
+- **Has the closure property:** the synthesis can itself serve as input to the next dialectical round
+
+<Warning>
+If your synthesis is so abstract, so meta, or so hedged that it can't be given to a monk to *believe at full conviction* and argue from — recursion will stall. A good synthesis is concrete enough to be a position, not just a commentary on positions.
+</Warning>
+
+## Process Tips
+
+### Re-read Relevant Sections in Later Rounds
+
+By Round 2-3, your context window is large and the skill's instructions have drifted. Before each round:
+
+1. Re-read `<core_concepts>` — the theoretical foundations
+2. Re-read `<phase2>` — anti-hedging and monk prompt structure
+3. Re-read `<phase4>` — self-sublation and Boydian decomposition
+4. Re-read `<phase5>` — what makes genuine synthesis
+5. Re-read `<phase6>` — auditor prompt and refinement process
+
+<Tip>
+Context drift is the most common failure mode in later rounds — the orchestrator starts cutting corners on exactly the steps that matter most.
+</Tip>
+
+### Present Refinements One at a Time
+
+After validation (Phase 6), you'll have several concrete improvements. **Don't dump them all on the user at once.**
+
+Instead:
+1. **Summarize the feedback briefly** (2-3 sentences)
+2. **Present ONE improvement, wait for response**
+3. **Discuss, resolve**
+4. **Move to the next improvement**
+
+The user's response to Improvement 1 often changes how you frame Improvement 2.
+
+### Treat Monk Output as Testimony, Not Evidence
+
+Monks pushed to full conviction will sometimes get a bit silly — overstating mechanisms, presenting uncertain claims as settled, making leaps that sound compelling but don't hold up. 
+
+<Note>
+This is expected and not a problem. Your job is to work with the *structure* of their arguments (what they're actually claiming, where the real collision is, what assumptions they share) — not to be persuaded by their rhetoric.
+</Note>
+
+If a monk asserts something that smells like confabulation, note it and don't build your synthesis on it.
+
+### Budget for Multiple Rounds
+
+<Card title="Time Investment" icon="clock">
+Expect 10–15 minutes per round minimum, and plan for at least 3 rounds. This is a heavy process by design.
+</Card>
+
+From test runs:
+- Round 1 (with full research): ~20-30 minutes
+- Round 2-3 (with targeted research): ~10-15 minutes each
+- Total for 3 rounds: ~40-60 minutes
+
+But the time investment pays off: by Round 3, you're operating in territory no single prompt could reach.
+
+## When to Use This Skill
+
+From Brad DeLong's framework: this skill is **offensive intellectual infrastructure.** Use it at DeLong's Level 4-5:
+
+- When the stakes justify deep engagement
+- When the tension is genuine and not resolvable by more information
+- When you need a *model update* rather than more data
+
+The elenctic interview (Phase 1) should filter for this:
+
+<Warning>
+**If the question can be answered by looking it up, this is the wrong tool.**
+</Warning>
+
+Use the dialectic when:
+- You've locked onto a vision and can't genuinely entertain alternatives
+- You're trying to do everything because cutting anything feels like betrayal
+- You can argue every side but can't commit to any of them
+- You've optimized a system and suspect you might be optimizing the wrong thing
+- Your own values contradict each other
+- "This is how it's done" has become invisible as an assumption

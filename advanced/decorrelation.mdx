@@ -1,0 +1,143 @@
+---
+title: Decorrelation Check
+description: How to verify that the Electric Monks actually diverged structurally — and what to do when they haven't
+---
+
+After both monks complete their essays, perform a critical verification step: **check that the monks actually diverged.** 
+
+The skill's value comes from *structurally uncorrelated* exploration of the problem space. Without genuine divergence, you get the same analysis with different conclusions bolted on — which produces compromise, not synthesis.
+
+## What to Check
+
+Verify the monks actually diverged by examining:
+
+<CardGroup cols={2}>
+  <Card title="Evidence Sources" icon="book">
+    Do the monks cite *different* evidence, or substantially overlapping sources?
+  </Card>
+  <Card title="Conceptual Vocabulary" icon="language">
+    Do they frame the problem using *different* conceptual vocabularies?
+  </Card>
+  <Card title="Unstated Assumptions" icon="eye">
+    Do their unstated assumptions *diverge*, or do they share the same background framework?
+  </Card>
+  <Card title="Perspective Recognition" icon="users">
+    Would a reader recognize these as genuinely *different perspectives,* or the same perspective with different conclusions bolted on?
+  </Card>
+</CardGroup>
+
+## The Structural Test
+
+<Note>
+The key question: Are the monks in "same framework, different conclusions" mode or "genuinely different conceptual frames" mode?
+</Note>
+
+Low decorrelation looks like:
+- Both monks cite the same 5-7 sources
+- Both use the same technical vocabulary and conceptual framework
+- Both assume the same unit of analysis (e.g., both analyze at the individual level, or both at the organizational level)
+- The only difference is which conclusion they reach
+
+High decorrelation looks like:
+- Different evidence bases
+- Different conceptual frameworks (one uses economic terminology, the other uses psychological)
+- Different units of analysis (one focuses on individual incentives, the other on systemic constraints)
+- Different metaphors and analogies
+- Reading both essays feels like encountering two genuinely different worldviews
+
+## Why Decorrelation Matters
+
+From the ensemble diversity research (Wood et al., JMLR 2023):
+
+> The bias-variance-diversity decomposition shows diversity is literally subtracted from ensemble error: `E[loss] = noise + avg_bias + avg_variance − diversity`
+
+Correlated errors eliminate the diversity benefit entirely. This is why monks must be spawned in separate sessions with no shared context, and why heterogeneous model families (when available) increase the skill's creative output.
+
+<Tip>
+**Surowiecki's wisdom-of-crowds conditions:** Independence is necessary, not optional. Correlated agents produce crowd *madness*, not wisdom.
+</Tip>
+
+## What to Do When Decorrelation is Low
+
+### Option 1: Reformulate the Belief Burdens
+
+Consider reformulating the belief burdens to force genuinely different conceptual frames, not just different positions within one frame.
+
+**Ask yourself:**
+- Are both monks operating from the same implicit model of how the domain works?
+- Are both assuming the same thing is the central question?
+- Could you assign belief burdens that force different *units of analysis* or different *ontological claims*?
+
+### Option 2: Revise the Framing Corrections
+
+The framing corrections in the monk prompts may not have been strong enough. Review them:
+
+- Did you identify the degenerate framing and explicitly steer monks away from it?
+- Did you give each monk an **ontological question** that forces them to conceptualize the domain differently?
+- Did you warn each monk what their opponent's *actual* strongest argument is (not the strawman version)?
+
+### Option 3: Use Heterogeneous Models
+
+If available, spawn the monks using different model families:
+- Different training data produces different "intuitions"
+- Different blind spots
+- Different reasoning patterns
+- Different default framings
+
+This is structural decorrelation at the training-data level, which is the single most promising direction in the multi-agent debate literature (Du et al., ICLR 2025).
+
+<Card title="Model Heterogeneity" icon="brain">
+When possible, use different model families for Monk A and Monk B. The orchestrator should remain your strongest available model (it needs maximum synthesis capability), but monks benefit from heterogeneity.
+</Card>
+
+### Option 4: Restart with Better Prompts
+
+<Warning>
+If decorrelation is genuinely low — the monks are arguing from the same conceptual framework — prefer restarting with revised prompts over continuing. Fresh context with better instructions produces better results than trying to salvage monks that have locked onto the same frame.
+</Warning>
+
+## How to Strengthen Decorrelation in Prompts
+
+### 1. Assign Different Ontological Claims
+
+Force each monk to answer "What IS this thing?" differently.
+
+**Example from TanStack/Next.js dialectic:**
+- Monk A: "A framework is a tool for *sovereignty* — the proper relationship is infrastructure as open primitive"
+- Monk B: "A framework is a tool for *capability* — the proper relationship is deep integration with commercial infrastructure"
+
+Both are arguing about frameworks, but they have fundamentally different concepts of what a framework *is for*.
+
+### 2. Assign Different Units of Analysis
+
+**Example:**
+- Monk A analyzes at the individual contributor level (developer experience, learning curve, day-to-day workflow)
+- Monk B analyzes at the organizational level (team coordination, maintenance burden, hiring constraints)
+
+### 3. Assign Different Temporal Frames
+
+**Example:**
+- Monk A reasons from historical patterns ("every time this structure emerged in the past, it led to X")
+- Monk B reasons from future possibility ("the landscape is shifting in ways that make new approaches viable")
+
+### 4. Target Different Evidence Domains
+
+Give each monk specific research directives that pull from different knowledge domains.
+
+**Example:**
+- Monk A: "Search for economic/incentive analyses of this structure"
+- Monk B: "Search for cognitive/psychological research on how people actually use these tools"
+
+## The Decorrelation-Synthesis Connection
+
+Strong decorrelation in Phase 3 enables strong synthesis in Phase 5. When the monks genuinely inhabit different conceptual frameworks:
+
+- The **shared assumptions** they reveal (Phase 4.2) are more surprising and more powerful
+- The **Boydian decomposition** (Phase 4.5) finds richer cross-domain connections
+- The **synthesis** has to do genuine conceptual work to bridge the gap
+
+Weak decorrelation produces weak synthesis — because there's no real gap to bridge, just a preference to split.
+
+<Tip>
+**Check decorrelation before investing in Phase 4-5.** If the monks didn't diverge structurally, the downstream analysis will be shallow no matter how carefully you execute it. Better to restart the monks than to push forward with correlated essays.
+</Tip>

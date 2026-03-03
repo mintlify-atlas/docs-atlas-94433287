@@ -1,122 +1,85 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Electric Monks — Hegelian Dialectic Skill",
+  "theme": "palm",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#8B5CF6",
+    "light": "#A78BFA",
+    "dark": "#6D28D9"
   },
-  "favicon": "/favicon.svg",
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/KyleAMathews/hegelian-dialectic-skill"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/KyleAMathews/hegelian-dialectic-skill"
+    }
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Get Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "introduction",
+              "installation",
+              "quickstart"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Core Concepts",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "concepts/electric-monks",
+              "concepts/artificial-belief-system",
+              "concepts/dialectical-process",
+              "concepts/when-to-use"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Process Guide",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "process/overview",
+              "process/phase1-interview",
+              "process/phase2-prompts",
+              "process/phase3-spawning",
+              "process/phase4-analysis",
+              "process/phase5-synthesis",
+              "process/phase6-validation",
+              "process/phase7-recursion"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Advanced Usage",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "advanced/belief-burden-patterns",
+              "advanced/domain-adaptation",
+              "advanced/decorrelation",
+              "advanced/tips-best-practices"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Theory",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Theoretical Foundations",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "theory/overview",
+              "theory/rao-belief-bottleneck",
+              "theory/hegel-dialectics",
+              "theory/boyd-destruction-creation",
+              "theory/alexander-semi-lattice",
+              "theory/additional-frameworks"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    ]
   }
 }

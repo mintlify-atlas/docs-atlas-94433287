@@ -1,0 +1,147 @@
+---
+title: Phase 1 — Elenctic interview + research
+description: Surface the real contradiction through Socratic questioning and domain research
+---
+
+<Warning>
+This is the most important phase. Everything downstream depends on it.
+</Warning>
+
+## 1a. Explain the process to the user
+
+**Before anything else, tell the user what's about to happen and why.** Many users have never encountered a structured dialectical process. If they don't understand the shape of what's coming, they'll be passive consumers of output instead of active co-pilots — and the process needs them as co-pilots.
+
+<Accordion title="Example process explanation (adapt to your user)">
+> Here's how this works. We're going to use a structured process to dig into this topic and build a deeper understanding than either of us could reach alone.
+>
+> **Step 1: Interview.** I'm going to ask you a bunch of questions. Not to quiz you — to understand what you're really wrestling with underneath the surface framing. The better I understand your situation, the better everything downstream works.
+>
+> **Step 2: Research.** I'll do deep research on the topic [or: I'll build a detailed picture of your situation from what you tell me] so I'm genuinely knowledgeable about the landscape.
+>
+> **Step 3: Two "Electric Monks."** I'll create two AI agents, each of which will *fully believe* one side of the tension you're facing. They won't hedge or try to be balanced — they'll each make the absolute strongest case for their position. The reason: when you read two positions argued at full conviction, you can see the *structure* of the disagreement clearly, without having to hold either position yourself.
+>
+> **Step 4: Structural analysis and synthesis.** I'll analyze *how* each position fails, find the deeper question underneath, and build a synthesis that transforms the question itself — not a compromise, but something genuinely new that neither side could have seen alone.
+>
+> **Step 5: We keep going.** Each synthesis generates new tensions. We'll do multiple rounds, and each round gets sharper and more insightful as we dig deeper into the heart of the matter. The first round is the least calibrated — think of it as setting the stage. The real breakthroughs usually come in rounds 2 and 3.
+>
+> **The most important thing: YOU are the source of the best insights here.** I'll get things wrong. The monks will make bad assumptions. The synthesis might miss something obvious to you. **Interrupt me constantly.** Correct wrong assumptions. Throw in new ideas when they occur to you. Tell me "that's not quite right, it's more like..." The value of this process comes from the collision between the structured analysis and your actual knowledge and judgment. Don't trust the output — interrogate it.
+</Accordion>
+
+<Tip>
+Adapt the language to the user — this is a template, not a script. For technical users, you can be more concise. For users unfamiliar with AI tools or structured analysis, spend more time on the explanation.
+</Tip>
+
+## 1b. Understand what the user wants
+
+Ask the user what they're thinking about. Determine:
+
+- **Mode A (Stress-Test):** User has one idea they want to challenge. You need to identify the strongest possible antithesis.
+- **Mode B (Opposition):** User has two positions in tension. You need to refine both to their steelman forms.
+
+## 1c. Elenctic probing
+
+Interview the user using Socratic technique. Your goal is to surface:
+
+<CardGroup cols={2}>
+  <Card title="Hidden assumptions" icon="eye-slash">
+    Assumptions they haven't articulated
+  </Card>
+  
+  <Card title="Deepest contradiction" icon="layer-group">
+    The deepest version of the contradiction, not the obvious surface-level framing
+  </Card>
+  
+  <Card title="Domain type" icon="compass">
+    Empirical, normative, personal, creative — this affects what a good synthesis looks like
+  </Card>
+  
+  <Card title="Mental model parameters" icon="sliders">
+    What specific parameters of their mental model they want updated
+  </Card>
+</CardGroup>
+
+### Key questions to probe
+
+- "What's your strongest intuition here? Where does it break down?"
+- "What would change your mind?"
+- "What are you actually optimizing for?"
+- "What's the version of the opposing view that worries you most?"
+- "Is this a decision you need to make, or understanding you want to build?"
+
+## 1c′. Identify the user's belief burden
+
+During the elenctic interview, **pay attention to what the user is stuck believing.** The dialectic's power comes from freeing the user from specific belief loads — but *which* beliefs need outsourcing depends on the person.
+
+<Info>
+See [Belief Burden Patterns](/advanced/belief-burden-patterns) for the complete catalog of six cognitive patterns (Convergent Visionary, Empathic Integrator, Exploratory Debater, Practical Executor, Possibility Explorer, Steady Guardian) and how to calibrate monks for each.
+</Info>
+
+## 1d. Ground the monks
+
+The monks need deep grounding before they can believe effectively. But *what* constitutes grounding depends on the domain type and how novel it is.
+
+### Research depth calibration
+
+<Tabs>
+  <Tab title="Novel/obscure domain">
+    **Full parallel research** — 2-3 agents, 150-250K tokens
+    
+    The orchestrator's training data is thin or outdated. You need the research to:
+    - Write good framing corrections
+    - Identify degenerate framings (obvious, shallow version)
+    - Ground the briefing in specifics
+    
+    This is the case where research is the highest-value spend.
+  </Tab>
+  
+  <Tab title="Well-known domain">
+    **Skip or minimize research**
+    
+    The orchestrator's training data is rich. Write the briefing from your own knowledge, perhaps with 2-3 targeted searches to check for recent developments.
+    
+    Save 10-20 minutes and 150K+ tokens.
+  </Tab>
+  
+  <Tab title="Known domain, novel angle">
+    **Light research** — a few targeted searches
+    
+    The orchestrator knows the landscape but needs to check the specific thesis. Don't do broad domain surveys.
+  </Tab>
+</Tabs>
+
+<Warning>
+Don't default to full research out of caution. If you can already write strong framing corrections and identify the degenerate framing without searching, you know enough.
+</Warning>
+
+### Domain types
+
+<Info>
+See [Domain Adaptation](/advanced/domain-adaptation) for detailed guidance on external-research domains (engineering, strategy, policy), personal/values domains (life decisions, relationships), and mixed domains (normative/institutional).
+</Info>
+
+## 1e. Write the context briefing document
+
+**Synthesize everything — external research AND user-sourced material — into a single neutral briefing document and save it to a file** (e.g., `context_briefing.md`).
+
+Both monks will read this file before writing. This is especially important for personal domains — it gives the monks the user's actual situation rather than letting them argue from generic positions.
+
+## 1f. Confirm with the user
+
+Before proceeding, summarize back:
+
+- "Here's how I understand the two positions..."
+- "Here's what I think the real tension is..."
+- "Here's what I'll have each agent research and argue..."
+- **"Are there companies, thinkers, comparison classes, or evidence we're missing?"**
+
+<Tip>
+This question consistently produces the highest-leverage interventions in the entire process. In testing, users caught missing competitors, missing comparison classes, and missing authority structures that fundamentally changed the synthesis.
+</Tip>
+
+Get the user's confirmation or correction. If the user identifies gaps, run a supplementary research agent to fill them and update the briefing before proceeding.
+
+## Next: Generate monk prompts
+
+<Card title="Phase 2: Generate monk prompts" href="/process/phase2-prompts" icon="arrow-right">
+  Craft the prompts that will make the monks believe at full conviction
+</Card>

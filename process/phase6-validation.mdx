@@ -1,0 +1,145 @@
+---
+title: Phase 6 — Validation
+description: Monks evaluate the synthesis and a hostile auditor attacks it for flaws
+---
+
+The synthesis must be validated by the original monks — not by you, and not just by the user. This is how Hegelian dialectics works: the thesis and antithesis must each recognize themselves as preserved-but-elevated in the Aufhebung.
+
+## Critical insight: Elevated vs defeated
+
+<Warning>
+The monks don't *stop believing* after the synthesis. A defeated monk has dropped its belief load — the belief fell on the floor rather than being sublated into something larger.
+
+A properly elevated monk *believes more* — it sees its original position as a partial truth within a larger truth, and it now believes the larger truth.
+
+The validation checks whether belief was *transformed* or merely *defeated.*
+</Warning>
+
+## Validation process
+
+Send a **condensed summary** of the determinate negation and sublation to Monk A and Monk B. They need the key moves (what was cancelled, preserved, elevated) and concrete proposals, not the full philosophical argument.
+
+<Tip>
+If your environment supports session resumption, call back into the **same sessions** for conviction context. If not, include a summary of the agent's original argument in the prompt.
+</Tip>
+
+### Model selection for validation
+
+<Info>
+Use the strongest available model with extended thinking for all validation — monk validation is more subtle than it appears (the monk must reason about whether its core insight was genuinely preserved or quietly destroyed).
+
+The hostile auditor (below) especially needs maximum reasoning, since its value comes from catching what everyone else missed.
+</Info>
+
+## Validation prompt structure
+
+```markdown
+You argued passionately for [POSITION]. Here is a summary of your argument:
+[CONDENSED SUMMARY OF THIS AGENT'S ESSAY — or omit if resuming session]
+
+A dialectician has analyzed the structural contradiction between your
+position and your opponent's, and proposed a synthesis.
+
+Here is the structural analysis:
+[CONDENSED SUMMARY OF PHASE 4 — key moves only]
+
+Here is the proposed synthesis:
+[CONDENSED SUMMARY OF PHASE 5 — what's cancelled, preserved, elevated,
+and the concrete proposal]
+
+Evaluate this honestly from your committed position. Answer:
+
+1. Does this synthesis PRESERVE your core insight? What specifically
+   does it get right about what you were arguing?
+
+2. Does it reveal a genuine limitation in your position that you can
+   now see? What were you missing? What assumption were you trapped in?
+
+3. Do you feel ELEVATED or DEFEATED? "Elevated" means: "I see my
+   position as a partial truth within a larger truth I couldn't have
+   reached alone." "Defeated" means: "My position was just dismissed
+   or diluted." Be honest — if you feel defeated, say so and explain
+   why.
+
+4. If you feel elevated: what NEW questions does this synthesis create
+   that you want to explore?
+```
+
+## Adversarial check
+
+**Before accepting the validation responses, apply the adversarial check:**
+
+Would the hardest-hit monk actually accept this? If one position is fundamentally challenged more than the other, does its monk's "elevated" response feel genuine or forced?
+
+<Warning>
+If a monk claims to feel elevated but its response reads like politeness rather than genuine recognition, the synthesis likely dismissed rather than preserved its core insight.
+</Warning>
+
+## Hostile auditor: Fresh adversarial agent
+
+After the monks validate, spawn a **hostile auditor** — a fresh agent with no position — to attack the synthesis.
+
+### Hostile auditor prompt
+
+```markdown
+You are a hostile auditor. Your sole job is to find flaws in a proposed
+synthesis of a dialectical contradiction.
+
+Here is the synthesis:
+[FULL SYNTHESIS]
+
+Attack it for:
+1. Hidden assumptions the synthesis smuggled in
+2. Compromise disguised as transcendence (did it just split the difference?)
+3. Structural flaws (does it actually make the contradiction predictable?)
+4. Emergent structure test failure (is every element traceable to one
+   monk or the other, or does it have genuinely new organizational properties?)
+5. Closure property failure (is it concrete enough to be believed and
+   argued from in the next round?)
+
+Use Pollock's defeater types:
+- Undercutting defeaters: broken inferential links
+- Rebutting defeaters: counter-evidence
+
+Prioritize structural critique over evidentiary critique.
+
+Be ruthless. If this synthesis is compromise dressed up, say so.
+```
+
+<Info>
+The hostile auditor uses the strongest available model. Its value comes from catching what everyone else missed because they were invested in making the synthesis work.
+</Info>
+
+## Refine based on validation
+
+Based on monk validation responses and the hostile auditor's critique, identify improvements.
+
+**Present improvements individually to the user, incorporate accepted ones.**
+
+Don't batch refinements — present one at a time so the user can evaluate each on its merits.
+
+## When validation reveals a bad synthesis
+
+If both monks feel defeated, or the hostile auditor identifies fundamental structural flaws, **go back to Phase 5 and revise.**
+
+<Note>
+This is not failure — it's the process working as designed. The validation caught a compromise before it became the foundation for the next round.
+</Note>
+
+## Example validation responses
+
+### Good (elevated):
+
+> "Yes, I see now. I was arguing that [POSITION] because I believed [ASSUMPTION]. But I was trapped in [FRAME]. The synthesis preserves my core insight about [X] — that's genuinely true — but situates it within [LARGER TRUTH] that I couldn't see from inside my position. I now believe this larger frame, and my original position looks like a partial view of it. The new question I want to explore is [NEW CONTRADICTION]."
+
+### Bad (defeated):
+
+> "I suppose the synthesis makes some good points. Both sides have merit. It's a reasonable compromise."
+
+This monk has been *defeated,* not elevated. The synthesis dismissed its position rather than transforming it.
+
+## Next: Recursion
+
+<Card title="Phase 7: Recursion" href="/process/phase7-recursion" icon="arrow-right">
+  Identify new contradictions and choose the next direction
+</Card>

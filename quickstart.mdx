@@ -1,80 +1,175 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: Quickstart
+description: Run your first Electric Monks dialectic in minutes
 ---
 
-## Get started in three steps
+# Quickstart
 
-Get your documentation site running locally and make your first customization.
+This guide walks you through running your first dialectic from start to finish.
 
-### Step 1: Set up your local environment
+## Running a dialectic
+
+<Steps>
+  <Step title="Create a subdirectory for your topic">
+    Each dialectic lives in its own directory. Create one and navigate to it:
+
+    ```bash
+    mkdir -p ~/dialectics/my-topic && cd ~/dialectics/my-topic
+    ```
+
+    Choose a descriptive name for your topic. Examples:
+    - `tanstack-vs-nextjs`
+    - `agent-governance`
+    - `career-decision`
+    - `architecture-monolith-vs-microservices`
+  </Step>
+
+  <Step title="Start your coding agent">
+    Launch your coding agent in that directory. For Claude Code:
+
+    ```bash
+    claude
+    ```
+
+    For other agents, use your agent's launch command.
+  </Step>
+
+  <Step title="Load the skill and provide your topic">
+    Install the skill and describe what you want to explore:
+
+    ```
+    /install-skill /path/to/SKILL.md
+
+    I want to explore: [your topic or tension here]
+    ```
+
+    The skill will walk you through the elenctic interview, spawn the Monks, and produce the full dialectical trace — all saved as files in the current directory.
+  </Step>
+
+  <Step title="Participate in the elenctic interview">
+    The orchestrator will ask you questions to surface:
+    - Hidden assumptions you haven't articulated
+    - The deepest version of the contradiction
+    - What you're actually wrestling with underneath the surface framing
+
+    <Note>
+    **Be specific.** The better the orchestrator understands your situation, the better everything downstream works. Don't hold back — share context, constraints, and what's really at stake.
+    </Note>
+  </Step>
+
+  <Step title="Review the Electric Monk essays">
+    The orchestrator will spawn two Monks, each believing one side of the tension at full conviction. You'll receive two position essays.
+
+    As you read them:
+    - **Correct wrong assumptions** — "That's not how it works" or "They're missing that..."
+    - **Add new ideas** — Things neither monk mentioned, gut feelings you can't fully articulate
+    - **Note what feels off** — If something doesn't ring true, say so
+
+    <Warning>
+    The Monks will get things wrong. That's expected. Your corrections are the highest-leverage input in the entire process.
+    </Warning>
+  </Step>
+
+  <Step title="Receive the synthesis">
+    The orchestrator performs structural analysis (determinate negation) and generates a synthesis that:
+    - **Cancels** both positions as complete truths
+    - **Preserves** the genuine insight in each
+    - **Elevates** to a new concept that transforms the question itself
+
+    This is not compromise. It's reconceptualization — something neither Monk could have conceived from within their frame.
+  </Step>
+
+  <Step title="Choose a recursive direction">
+    Each synthesis generates new contradictions. The orchestrator will propose 2–4 directions for the next round.
+
+    Pick one that feels most valuable. Each round ratchets up the quality.
+
+    <Note>
+    The `dialectic_queue.md` file tracks explored and unexplored contradictions. You can come back to it in a future session and pick up where you left off.
+    </Note>
+  </Step>
+</Steps>
+
+## Example topics to explore
+
+Here are real topics that work well with the dialectic skill:
+
+### Technical architecture
+- "Should we use TanStack Router or Next.js App Router for our new application?"
+- "Monolith vs. microservices for our scaling needs"
+- "React vs. Vue for our team's frontend architecture"
+- "GraphQL vs. REST for our API strategy"
+
+### Product strategy
+- "Should we focus on enterprise or developer-first go-to-market?"
+- "Build an open-source community or focus on commercial features?"
+- "Should we pursue funding or stay bootstrapped?"
+
+### Personal decisions
+- "Should I take the senior IC track or move into management?"
+- "Stay at my current company or join the startup?"
+- "Deep specialization vs. broad generalist career path"
+
+### Philosophy and values
+- "How do I balance shipping fast with building the right thing?"
+- "Individual autonomy vs. team coordination in our org structure"
+- "Should we prioritize innovation or stability in this phase?"
+
+## Tips for effective dialectics
 
 <AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
+  <Accordion title="You are the co-pilot">
+    Interrupt, correct, redirect at any point. The Monks will get things wrong. Your corrections are the highest-leverage input in the entire process.
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
+
+  <Accordion title="The first round is calibration">
+    Don't judge the skill by Round 1. The real insights come in Rounds 2–3, once the process has dug past the obvious framing.
+  </Accordion>
+
+  <Accordion title="Say yes to recursion">
+    When the skill proposes recursive directions after a synthesis, pick one. Each round ratchets up the quality. The dialectic operates in territory no single prompt could reach by Round 2–3.
+  </Accordion>
+
+  <Accordion title="The dialectic queue persists">
+    The `dialectic_queue.md` file tracks explored and unexplored contradictions. You can come back to it in a future session and pick up where you left off.
+  </Accordion>
+
+  <Accordion title="Expect 10-15 minutes per round">
+    This is a heavy process by design. Plan for at least 3 rounds. Block off 45-60 minutes for a meaningful session.
   </Accordion>
 </AccordionGroup>
 
-### Step 2: Deploy your changes
+## What to expect
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+### Round 1: Calibration
+- The orchestrator learns your belief burden
+- Monks make their first committed arguments
+- Synthesis identifies the deeper question
+- **Least insightful output** — this is setup
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+### Round 2: Depth
+- Process has dug past obvious framing
+- Monks pull in cross-domain material
+- Synthesis starts revealing structural insights
+- **Real breakthroughs begin here**
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+### Round 3+: Territory
+- Operating in conceptual space no single prompt could reach
+- Cross-domain connections from unexpected fields
+- Synthesis produces genuine reconceptualization
+- **Highest-value output**
 
-### Step 3: Go live
-
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+<Note>
+In test runs, a React/Vue dialectic evolved from "corporate lab vs. auteur" into a "co-evolutionary arms race" framework. An institutional identity dialectic went through seven cycles, pulling in Gödel's incompleteness theorem, Coasean transaction costs, and jurisprudential concepts that had nothing to do with the original question — but were essential by the time the dialectic reached them.
+</Note>
 
 ## Next steps
 
-Now that you have your docs running, explore these key features:
-
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+  <Card title="Introduction" icon="book" href="/introduction">
+    Understand the theory behind the skill
+  </Card>
+  <Card title="Installation" icon="download" href="/installation">
+    Review setup and requirements
+  </Card>
 </CardGroup>
-
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>

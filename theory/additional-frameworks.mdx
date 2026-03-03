@@ -1,0 +1,306 @@
+---
+title: "Additional Theoretical Foundations"
+description: "Socratic Elenchus, Peirce's Abduction, Galinsky's perspective-taking, multi-agent debate, Pollock's defeasible reasoning, and Aquinas on slender knowledge"
+---
+
+# Additional Theoretical Foundations
+
+Beyond the core frameworks (Rao, Hegel, Boyd, Alexander), the skill draws on several additional theoretical foundations.
+
+## Socratic Elenchus
+
+The **elenctic method** probes a position through questioning to expose contradictions and reach **aporia** (productive perplexity).
+
+<Info>
+Not adversarial but cooperative — "midwifery of ideas." The interview phase (Phase 1) of the skill is elenctic.
+</Info>
+
+### How It Works
+
+The orchestrator interviews you using Socratic technique to surface:
+
+- Hidden assumptions you haven't articulated
+- The *deepest* version of the contradiction (not the obvious surface-level framing)
+- What domain type this is (empirical, normative, personal, creative)
+- What specific parameters of your mental model you want updated
+
+### Aporia as Valid Outcome
+
+Reaching productive perplexity about the *right* question is sometimes more valuable than a confident answer to the *wrong* question.
+
+<Accordion title="When aporia is valid">
+**Domain-dependent:**
+
+- **Empirical domains:** Rarely — there's usually a testable answer
+- **Normative domains:** Yes — sometimes the best outcome is a clear map of the tension
+- **Personal decisions:** Yes — clarity about what you *actually* want
+- **Creative domains:** Sometimes — new possibilities matter more than resolution
+- **Risk analysis:** No — you need a decision framework
+</Accordion>
+
+## Peirce's Abduction
+
+Charles Sanders Peirce identified three modes of inference:
+
+<CardGroup cols={3}>
+  <Card title="Deduction" icon="arrow-down">
+    From rule to consequence
+    
+    "All men are mortal; Socrates is a man; therefore Socrates is mortal"
+  </Card>
+  <Card title="Induction" icon="arrow-up">
+    From cases to rule
+    
+    "These 100 swans are white; therefore all swans are white"
+  </Card>
+  <Card title="Abduction" icon="lightbulb">
+    From surprising fact to explanatory hypothesis
+    
+    "The grass is wet; therefore it probably rained"
+  </Card>
+</CardGroup>
+
+### The Synthesis is Abductive
+
+Given the surprising fact that both monk positions exist and each has genuine evidence, **what hypothesis would make this *unsurprising*?**
+
+You're looking for the idea that, if true, would explain why both positions exist and what each was partially perceiving.
+
+### Peirce's Abduction Typology
+
+Maps to synthesis quality:
+
+<Steps>
+  <Step title="(a) Selective">
+    Choosing from existing frameworks.
+    
+    **Weakest** — essentially a centrist position.
+  </Step>
+  <Step title="(b) Conditional-Creative">
+    Creating a new relationship between known concepts.
+    
+    **Moderate** — this is what most good syntheses achieve.
+  </Step>
+  <Step title="(c) Propositional-Conditional-Creative">
+    Introducing a genuinely new concept or structural principle.
+    
+    **Strongest** — this is what the best recursive rounds produce.
+  </Step>
+</Steps>
+
+Aim for (c) but accept (b) if it genuinely resolves the contradiction. If you're at (a), push harder.
+
+## Galinsky: Perspective-Taking vs Advocacy
+
+Adam Galinsky's research shows that **perspective-taking** (cognitively inhabiting another's viewpoint) outperforms **advocacy** (arguing for a position) at both conscious and nonconscious levels.
+
+<Info>
+**The mechanism is self-other overlap** — when you inhabit a position rather than argue for it, you access richer associative networks and produce higher-quality elaboration.
+</Info>
+
+### Why the Monks "ARE" Their Positions
+
+This is the psychological basis for the Electric Monk's core instruction:
+
+<Card title="From the Monk Prompt" icon="quote-left">
+"You are not arguing FOR this position — you ARE this position. Inhabit it fully.
+
+Ask yourself: what would the world look like if I had spent my career developing this framework? What problems would I see everywhere? What would I find obvious that others miss?"
+</Card>
+
+**Inhabiting produces deeper arguments than advocating.**
+
+## Multi-Agent Debate Literature
+
+Key findings from Du et al. (2023, MIT) and subsequent work through ICLR 2025:
+
+<AccordionGroup>
+  <Accordion title="Multiple agents debating improves reasoning" icon="users">
+    Significantly better performance on reasoning tasks and factual accuracy compared to single-agent prompting.
+  </Accordion>
+  
+  <Accordion title="Heterogeneous agents outperform homogeneous ones" icon="puzzle-piece">
+    Agents with different roles produce better outcomes than identical agents.
+    
+    **Most promising direction:** Heterogeneous model families (different foundation models for different agents) — different training data produces genuinely different reasoning patterns.
+  </Accordion>
+  
+  <Accordion title="Agents are too agreeable by default" icon="handshake">
+    RLHF makes agents converge prematurely. Majority pressure suppresses independent correction.
+    
+    **Solution in this skill:** Anti-hedging instructions explicitly counter RLHF agreeableness tendencies.
+  </Accordion>
+  
+  <Accordion title="Debate final answers vs reasoning structures" icon="brain">
+    Core failure mode: agents debating *final answers* rather than *reasoning structures*.
+    
+    **Solution in this skill:** Monk prompts require explicit reasoning chains ("show your reasoning skeleton").
+  </Accordion>
+</AccordionGroup>
+
+### Independence is Load-Bearing
+
+Wood et al. (JMLR 2023) formalize why monk independence matters:
+
+```
+E[loss] = noise + avg_bias + avg_variance − diversity
+```
+
+**Diversity is literally subtracted from ensemble error.** Correlated errors eliminate the diversity benefit entirely.
+
+This is why:
+- Monks must be spawned in **separate sessions** with no shared context
+- **Heterogeneous model families** (when available) increase creative output
+- The **decorrelation check** in Phase 3 verifies monks actually diverged
+
+## Pollock: Defeasible Reasoning
+
+John Pollock's epistemology distinguishes two types of defeaters:
+
+<CardGroup cols={2}>
+  <Card title="Undercutting Defeaters" icon="link-slash">
+    **The inferential link is broken**
+    
+    Reasons to doubt the connection between evidence and conclusion.
+    
+    "Your argument assumes X, but X doesn't actually hold in this domain."
+    
+    **More structurally revealing** — identifies *how* reasoning fails.
+  </Card>
+  <Card title="Rebutting Defeaters" icon="shield-halved">
+    **Counter-evidence**
+    
+    Evidence directly supporting the opposite conclusion.
+    
+    "Here's evidence that contradicts your claim."
+    
+    **Standard counter-argument** — important but reveals less structure.
+  </Card>
+</CardGroup>
+
+Undercutting is parallel to **determinate negation** — both identify the *specific way* something fails, not just *that* it fails.
+
+### Operationally Present: The Hostile Auditor
+
+The auditor prompt (Phase 6) prioritizes defeat types:
+
+1. **Undercutting defeaters** (highest priority)
+2. Self-defeating structure
+3. **Rebutting defeaters** (lowest priority)
+
+<Accordion title="Why this ordering matters">
+Undercutting reveals structural problems that compromise the entire synthesis.
+
+Rebutting just points to evidence you might have missed.
+
+The auditor's job is to find **structural flaws**, not just opposing evidence.
+</Accordion>
+
+## Aquinas: Slender Knowledge of the Highest Things
+
+<Card title="Thomas Aquinas" icon="quote-left">
+"The slenderest knowledge that may be obtained of the highest things is more desirable than the most certain knowledge obtained of lesser things."
+</Card>
+
+This is the **philosophical aspiration** of the entire process.
+
+### What This Means Operationally
+
+The dialectic does not produce certainty — every synthesis is provisional, fertile, pointing toward a deeper contradiction.
+
+But that **slender, provisional knowledge of deep structure** is worth more than confident knowledge of surface questions.
+
+<Info>
+**Deep structure answers:**
+- Why this tension exists
+- What hidden question drives it
+- What shared assumption both sides are trapped in
+
+**Surface questions:**
+- "Which option should I pick?"
+- "Which framework is better?"
+- "What should I do?"
+</Info>
+
+### Operational Implications
+
+<Steps>
+  <Step title="Don't stop at Round 1">
+    Round 1 produces more certain knowledge of the lesser thing (the surface framing).
+    
+    Round 3 produces slender knowledge of the highest thing (the deep structure).
+    
+    **The first round is calibration. The prize is in the recursion.**
+  </Step>
+  <Step title="Prefer depth over coverage">
+    A synthesis that names the deep tension but can't fully resolve it is more valuable than one that resolves a shallow tension with false confidence.
+  </Step>
+  <Step title="Aporia is sometimes the highest output">
+    Reaching productive perplexity about the *right* question is more valuable than a confident answer to the *wrong* question.
+  </Step>
+</Steps>
+
+### Historical Context: The Disputatio
+
+Aquinas practiced the **Disputatio** — structured scholastic debate where committed advocates argued positions before a master who synthesized.
+
+**The Electric Monks are his disputing friars, mechanized.**
+
+## Eisenstein: Typographic Fixity
+
+Elizabeth Eisenstein argued that the printing press's most transformative effect was **typographic fixity** — enabling scholars to lay texts side by side and detect contradictions.
+
+Before print:
+- Read one manuscript
+- Travel to another library
+- Read another manuscript
+- Try to hold the comparison in your head
+
+After print:
+- Lay texts side by side
+- Detect contradictions systematically
+- Build comparative understanding
+
+### LLMs as the Next Step
+
+**LLMs represent the next transition:** Not just fixity and side-by-side comparison, but *automated structural comparison.*
+
+Both remaining bottlenecks — research breadth and structural decomposition — are cognitively brutal. Most people abandon the first too early and never attempt the second.
+
+<Info>
+This skill exploits that transition: LLMs can do structural comparison at a scale and speed that makes multi-round recursive dialectics practical in a single session.
+</Info>
+
+## DeLong: Offensive Intellectual Infrastructure
+
+Brad DeLong's "Cognitive Distributed Disruption of Attention Crisis" (2026) frames the problem this skill addresses:
+
+**The volume of plausible, credentialed output now exceeds any serious person's cognitive bandwidth.**
+
+DeLong's solution is *defensive* intellectual infrastructure:
+- Ruthless triage
+- Model-updating as the frame for reading
+- Information portfolio management
+
+### This Skill is the Offensive Complement
+
+DeLong's triage decides what deserves deep engagement.
+
+The Electric Monks provide the method *for* that engagement — what you reach for when you've found a genuine contradiction that can't be resolved by reading one more article.
+
+<Warning>
+**The skill should not be used for everything.** It's expensive (time, tokens, cognitive effort).
+
+Use it at DeLong's Level 4-5:
+- When the stakes justify deep engagement
+- When the tension is genuine and not resolvable by more information
+- When you need a *model update* rather than more data
+
+The elenctic interview should filter for this.
+</Warning>
+
+---
+
+<Card title="Previous: Alexander's Semi-Lattice" icon="arrow-left" href="/theory/alexander-semi-lattice">
+  How the skill compiles semi-lattices from multiple trees
+</Card>
