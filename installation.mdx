@@ -62,17 +62,33 @@ The `dialectic_queue.md` file persists across sessions. You can come back to it 
 
 ## Loading the skill
 
-The skill is loaded using your coding agent's skill installation command. The exact syntax depends on your agent:
+This skill is designed for OpenCode and compatible coding agents that support skill loading.
 
-### For agents supporting /install-skill
+### Get the skill
+
+The skill is available on GitHub:
+
+```bash
+git clone https://github.com/KyleAMathews/hegelian-dialectic-skill.git
+```
+
+### For OpenCode
+
+Load the skill using the skills command:
+
+```bash
+npx skills add https://github.com/KyleAMathews/hegelian-dialectic-skill
+```
+
+Or if you've cloned the repository locally, point to the SKILL.md file:
 
 ```
-/install-skill /path/to/SKILL.md
+/install-skill /path/to/hegelian-dialectic-skill/SKILL.md
 ```
 
-### Alternative installation methods
+### For other coding agents
 
-If your agent doesn't support `/install-skill`, check your agent's documentation for how to load custom skills or agent prompts.
+If your agent supports custom skills or agent prompts, provide the path to `SKILL.md` from the cloned repository. Check your agent's documentation for the specific command.
 
 ## Model selection
 
